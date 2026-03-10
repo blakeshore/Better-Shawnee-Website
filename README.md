@@ -17,9 +17,15 @@ This is an improved version of the official Shawnee, OK website: www.shawneeok.o
 --- 
 ### Technologies Used
 - HTML
-- CSS
-- JavaScript
-- (TBD)
+- Tailwind CSS + DaisyUI
+- JavaScript (TBD)
+
+Note: to use Tailwind CSS + DaisyUI, include these two lines in the header of your HTML file.
+
+`<link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" />`
+
+`<script src="https://cdn.tailwindcss.com"></script>`
+
 ---
 ### Timeline
 - Weeks 1-2: Build mockups of the redesigned components and pages. Find and install tools and languages for website building. Learn how to use these tools.
