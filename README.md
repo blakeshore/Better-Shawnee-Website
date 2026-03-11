@@ -18,7 +18,7 @@ This is an improved version of the official Shawnee, OK website: www.shawneeok.o
 ### Technologies Used
 - HTML
 - Tailwind CSS + DaisyUI
-- JavaScript (TBD)
+- JavaScript (Plugins TBD: Maybe React)
 
 Note: to use Tailwind CSS + DaisyUI, include these two lines in the header of your HTML file.
 
