@@ -40,7 +40,7 @@
   </script>
 </head>
 
-<body class="bg-base-200">
+<body class="bg-[url('../graphics/HomepageSunsetBackground.jpg')] bg-cover bg-center bg-fixed">
 
   <div class="navbar bg-base-100 px-8 shadow sticky top-0 w-full z-50">
   <!-- Mobile menu -->
@@ -105,14 +105,14 @@
   </div>
 
   <!-- Right side controls -->
-  <div class="navbar-end gap-5">
+  <div class="navbar-end gap-2">
 
     <!-- Dark / Light Mode Button -->
     <button onclick="toggleTheme()" class="btn btn-ghost btn-circle">
 
       <!-- moon icon -->
       <svg xmlns="http://www.w3.org/2000/svg"
-      class="h-5 w-5"
+      class="h-6 w-6"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor">
@@ -162,96 +162,300 @@
 
   </div>
 
-  <!-- Hero Section -->
-  <div class="hero min-h-[40vh] bg-base-200">
-    <div class="hero-content text-center">
-      <div class="max-w-md">
-        <h1 class="text-5xl font-bold">Hello there</h1>
-        <p class="py-6">
-          This is a simple webpage built using Tailwind CSS and daisyUI components.
-        </p>
-        <button class="btn btn-secondary">Get Started</button>
-      </div>
+  <!-- Button grid -->
+  <div class="flex justify-center mt-8">
+
+    <div class="grid grid-cols-4 w-[900px] gap-2">
+
+      <button class="bg-blue-600 text-white py-6 border border-blue-400
+                    transition duration-300 ease-in-out
+                    hover:bg-blue-700 hover:shadow-xl hover:scale-105">
+        Bill Pay
+      </button>
+
+      <button class="bg-blue-600 text-white py-6 border border-blue-400
+                    transition duration-300 ease-in-out
+                    hover:bg-blue-700 hover:shadow-xl hover:scale-105">
+        Events Calendar
+      </button>
+
+      <button class="bg-blue-600 text-white py-6 border border-blue-400
+                    transition duration-300 ease-in-out
+                    hover:bg-blue-700 hover:shadow-xl hover:scale-105">
+        Department Contacts
+      </button>
+
+      <button class="bg-blue-600 text-white py-6 border border-blue-400
+                    transition duration-300 ease-in-out
+                    hover:bg-blue-700 hover:shadow-xl hover:scale-105">
+        Visit Shawnee
+      </button>
+
+      <button class="bg-blue-600 text-white py-6 border border-blue-400
+                    transition duration-300 ease-in-out
+                    hover:bg-blue-700 hover:shadow-xl hover:scale-105">
+        Employment
+      </button>
+
+      <button class="bg-blue-600 text-white py-6 border border-blue-400
+                    transition duration-300 ease-in-out
+                    hover:bg-blue-700 hover:shadow-xl hover:scale-105">
+        Parks
+      </button>
+
+      <button class="bg-blue-600 text-white py-6 border border-blue-400
+                    transition duration-300 ease-in-out
+                    hover:bg-blue-700 hover:shadow-xl hover:scale-105">
+        Adopt a Pet
+      </button>
+
+      <button class="bg-blue-600 text-white py-6 border border-blue-400
+                    transition duration-300 ease-in-out
+                    hover:bg-blue-700 hover:shadow-xl hover:scale-105">
+        Citizen Request Portal
+      </button>
     </div>
   </div>
 
-  <!-- Card Section -->
-  <div class="flex justify-center p-10">
-    <div class="card w-96 bg-base-100 shadow-xl">
-      <figure>
-        <img src="https://picsum.photos/400/200" alt="Example image">
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">Example Card</h2>
-        <p>This card component comes directly from daisyUI.</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-accent">Learn More</button>
-        </div>
+  <div class="flex flex-col md:flex-row justify-center gap-8 mt-8 max-w-6xl mx-auto items-stretch">
+
+    <!-- Recent News -->
+    <div class="flex-1 border-8 border-pink-600 shadow-lg bg-gray-200 flex flex-col">
+
+      <!-- Header -->
+      <div class="flex justify-between items-center bg-pink-600 text-white px-6 py-3">
+        <h2 class="text-2xl font-bold">Recent News</h2>
+        <a href="#" class="text-sm hover:underline">All News</a>
       </div>
+
+      <!-- List -->
+      <div class="p-6 space-y-5 flex-grow bg-base-200">
+
+        <div class="flex items-start gap-4 p-3 rounded transition duration-200 hover:bg-base-100 group">
+
+          <svg class="w-10 h-10 text-pink-600 transition-transform duration-200 group-hover:translate-x-1"
+          fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path d="M4 4h16v16H4z"/>
+            <path d="M8 8h8M8 12h8M8 16h4"/>
+          </svg>
+
+          <div>
+            <a href="#" class="font-semibold text-lg hover:underline">
+              Headline 1 (most recent)
+            </a>
+            <p class="text-sm italic text-base-content/70">Post Date 1</p>
+          </div>
+
+        </div>
+
+        <div class="flex items-start gap-4 p-3 rounded transition duration-200 hover:bg-base-100 group">
+
+          <svg class="w-10 h-10 text-pink-600 transition-transform duration-200 group-hover:translate-x-1"
+          fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path d="M4 4h16v16H4z"/>
+            <path d="M8 8h8M8 12h8M8 16h4"/>
+          </svg>
+
+          <div>
+            <a href="#" class="font-semibold text-lg hover:underline">
+              Headline 2
+            </a>
+            <p class="text-sm italic text-base-content/70">Post Date 2</p>
+          </div>
+
+        </div>
+
+        <div class="flex items-start gap-4 p-3 rounded transition duration-200 hover:bg-base-100 group">
+
+          <svg class="w-10 h-10 text-pink-600 transition-transform duration-200 group-hover:translate-x-1"
+          fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path d="M4 4h16v16H4z"/>
+            <path d="M8 8h8M8 12h8M8 16h4"/>
+          </svg>
+
+          <div>
+            <a href="#" class="font-semibold text-lg hover:underline">
+              Headline 3
+            </a>
+            <p class="text-sm italic text-base-content/70">Post Date 3</p>
+          </div>
+
+        </div>
+
+        <div class="flex items-start gap-4 p-3 rounded transition duration-200 hover:bg-base-100 group">
+
+          <svg class="w-10 h-10 text-pink-600 transition-transform duration-200 group-hover:translate-x-1"
+          fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path d="M4 4h16v16H4z"/>
+            <path d="M8 8h8M8 12h8M8 16h4"/>
+          </svg>
+
+          <div>
+            <a href="#" class="font-semibold text-lg hover:underline">
+              Headline 4
+            </a>
+            <p class="text-sm italic text-base-content/70">Post Date 4</p>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
+
+    <!-- Upcoming Events -->
+    <div class="flex-1 border-8 border-green-600 shadow-lg bg-gray-200 flex flex-col">
+
+      <!-- Header -->
+      <div class="flex justify-between items-center bg-green-600 text-white px-6 py-3">
+        <h2 class="text-2xl font-bold">Upcoming Events</h2>
+        <a href="#" class="text-sm hover:underline">All Events</a>
+      </div>
+
+      <!-- List -->
+      <div class="p-6 space-y-5 flex-grow bg-base-200">
+
+        <div class="flex items-start gap-4 p-3 rounded transition duration-200 hover:bg-base-100 group">
+
+          <svg class="w-10 h-10 text-green-600 transition-transform duration-200 group-hover:translate-x-1"
+          fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path d="M3 20l9-14 9 14"/>
+            <path d="M7 20v-4M17 20v-4"/>
+            <path d="M12 6v14"/>
+          </svg>
+
+          <div>
+            <a href="#" class="font-semibold text-lg hover:underline">
+              Event Name 1 (soonest)
+            </a>
+            <p class="text-sm italic text-base-content/70">Date 1</p>
+          </div>
+
+        </div>
+
+        <div class="flex items-start gap-4 p-3 rounded transition duration-200 hover:bg-base-100 group">
+
+          <svg class="w-10 h-10 text-green-600 transition-transform duration-200 group-hover:translate-x-1"
+          fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path d="M3 20l9-14 9 14"/>
+            <path d="M7 20v-4M17 20v-4"/>
+            <path d="M12 6v14"/>
+          </svg>
+
+          <div>
+            <a href="#" class="font-semibold text-lg hover:underline">
+              Event Name 2
+            </a>
+            <p class="text-sm italic text-base-content/70">Date 2</p>
+          </div>
+
+        </div>
+
+        <div class="flex items-start gap-4 p-3 rounded transition duration-200 hover:bg-base-100 group">
+
+          <svg class="w-10 h-10 text-green-600 transition-transform duration-200 group-hover:translate-x-1"
+          fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path d="M3 20l9-14 9 14"/>
+            <path d="M7 20v-4M17 20v-4"/>
+            <path d="M12 6v14"/>
+          </svg>
+
+          <div>
+            <a href="#" class="font-semibold text-lg hover:underline">
+              Event Name 3
+            </a>
+            <p class="text-sm italic text-base-content/70">Date 3</p>
+          </div>
+
+        </div>
+
+        <div class="flex items-start gap-4 p-3 rounded transition duration-200 hover:bg-base-100 group">
+
+          <svg class="w-10 h-10 text-green-600 transition-transform duration-200 group-hover:translate-x-1"
+          fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path d="M3 20l9-14 9 14"/>
+            <path d="M7 20v-4M17 20v-4"/>
+            <path d="M12 6v14"/>
+          </svg>
+
+          <div>
+            <a href="#" class="font-semibold text-lg hover:underline">
+              Event Name 4
+            </a>
+            <p class="text-sm italic text-base-content/70">Date 4</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
   </div>
 
   <!-- Footer -->
-  <footer class="bg-base-100 p-1">
+  <footer class="bg-base-100 p-1 mt-8">
 
-<div class="max-w-7xl mx-auto flex items-center justify-between gap-10 flex-wrap">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-10 flex-wrap">
 
-  <!-- Left Section -->
-  <div class="flex items-start gap-4">
+      <!-- Left Section -->
+      <div class="flex items-start gap-4">
 
-    <img src="/graphics/ShawneeLogo.png" class="h-16">
+        <img src="/graphics/ShawneeLogo.png" class="h-16">
 
-    <div>
-      <p class="font-bold">CITY HALL | 16 West 9th Street</p>
-      <p>Shawnee, OK 74801-6812</p>
+        <div>
+          <p class="font-bold">CITY HALL | 16 West 9th Street</p>
+          <p>Shawnee, OK 74801-6812</p>
+        </div>
+
+      </div>
+
+      <!-- Middle Section (Buttons) -->
+      <div class="grid grid-cols-2 gap-x-6 gap-y-0.1">
+
+        <button class="btn btn-ghost">Action Center</button>
+        <button class="btn btn-ghost">Pay Online</button>
+
+        <button class="btn btn-ghost">Fire Department</button>
+        <button class="btn btn-ghost">Parks & Recreation</button>
+
+        <button class="btn btn-ghost">Police Department</button>
+        <button class="btn btn-ghost">Pay My Bills</button>
+
+      </div>
+
+      <!-- Right Section -->
+      <div class="flex items-center gap-6">
+
+        <!-- Social Icons -->
+        <div class="flex gap-2">
+
+          <button class="btn btn-square btn-error text-white"><img src="/graphics/YTLogo.png"></button>
+          <button class="btn btn-square btn-info text-white"><img src="/graphics/TwitterLogo.png"></button>
+          <button class="btn btn-square btn-primary bg-blue-600 text-white"><img src="/graphics/FacebookLogo.png"></button>
+
+        </div>
+
+        <!-- Share / Subscribe -->
+        <div class="flex flex-col gap-2">
+
+          <button class="btn btn-primary gap-2">
+            Share 🔗
+          </button>
+
+          <button class="btn btn-primary gap-2">
+            Subscribe ▶
+          </button>
+
+        </div>
+
+      </div>
+
     </div>
 
-  </div>
-
-  <!-- Middle Section (Buttons) -->
-  <div class="grid grid-cols-2 gap-x-6 gap-y-0.1">
-
-    <button class="btn btn-ghost">Action Center</button>
-    <button class="btn btn-ghost">Pay Online</button>
-
-    <button class="btn btn-ghost">Fire Department</button>
-    <button class="btn btn-ghost">Parks & Recreation</button>
-
-    <button class="btn btn-ghost">Police Department</button>
-    <button class="btn btn-ghost">Pay My Bills</button>
-
-  </div>
-
-  <!-- Right Section -->
-  <div class="flex items-center gap-6">
-
-    <!-- Social Icons -->
-    <div class="flex gap-2">
-
-      <button class="btn btn-square btn-error text-white"><img src="/graphics/YTLogo.png"></button>
-      <button class="btn btn-square btn-info text-white"><img src="/graphics/TwitterLogo.png"></button>
-      <button class="btn btn-square btn-primary text-white"><img src="/graphics/FacebookLogo.png"></button>
-
-    </div>
-
-    <!-- Share / Subscribe -->
-    <div class="flex flex-col gap-2">
-
-      <button class="btn btn-primary gap-2">
-        Share 🔗
-      </button>
-
-      <button class="btn btn-primary gap-2">
-        Subscribe ▶
-      </button>
-
-    </div>
-
-  </div>
-
-</div>
-
-</footer>
+  </footer>
 
 </body>
 </html>
