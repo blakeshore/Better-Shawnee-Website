@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City of Shawnee</title>
+
+    <!-- Tailwind + daisyUI CDN - Fast and easy way to import-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Determine user's device theme-->
+    <script>
+  window.addEventListener("DOMContentLoaded", () => {
+
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    const html = document.documentElement;
+
+    if (prefersDark) {
+      html.setAttribute("data-theme", "dark");
+    } else {
+      html.setAttribute("data-theme", "light");
+    }
+
+  });
+  </script>
+
+    <script id="themeScript">
+  function toggleTheme() {
+    const html = document.documentElement;
+    const current = html.getAttribute("data-theme");
+
+    if (current == "dark") {
+      html.setAttribute("data-theme", "light");
+    } else {
+      html.setAttribute("data-theme", "dark");
+    }
+  }
+  </script>
+  </head>
+
+  <body
+    class="bg-[url('../graphics/HomepageSunsetBackground.jpg')] bg-cover bg-center bg-fixed">
+
+    <div class="navbar bg-base-100 px-8 shadow sticky top-0 w-full z-50">
+      <!-- Mobile menu -->
+      <div class="navbar-start lg:hidden">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost">
+            ☰
+          </label>
+          <ul tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Government</a></li>
+            <li><a>Services</a></li>
+            <li><a>Community</a></li>
+            <li><a>How Do I?</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Logo -->
+      <div class="navbar-start hidden lg:flex">
+        <a href="homepage.html">
+          <img src="/graphics/ShawneeLogo.png" class="h-14 mr-10">
+        </a>
+      </div>
+
+      <!-- Navigation -->
+      <div class="navbar-center hidden lg:flex gap-8 text-lg">
+
+        <div class="dropdown dropdown-hover">
+          <label tabindex="0" class="cursor-pointer">Government</label>
+          <ul
+            class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Mayor</a></li>
+            <li><a>City Council</a></li>
+            <li><a>Departments</a></li>
+          </ul>
+        </div>
+
+        <div class="dropdown dropdown-hover">
+          <label tabindex="0" class="cursor-pointer">Services</label>
+          <ul
+            class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Utilities</a></li>
+            <li><a>Permits</a></li>
+            <li><a>Trash Pickup</a></li>
+          </ul>
+        </div>
+
+        <div class="dropdown dropdown-hover">
+          <label tabindex="0" class="cursor-pointer">Community</label>
+          <ul
+            class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Events</a></li>
+            <li><a>Parks</a></li>
+            <li><a>News</a></li>
+          </ul>
+        </div>
+
+        <div class="dropdown dropdown-hover">
+          <label tabindex="0" class="cursor-pointer">How Do I?</label>
+          <ul
+            class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+            <li><a>Pay Bill</a></li>
+            <li><a>Apply Permit</a></li>
+            <li><a>Report Issue</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Right side controls -->
+      <div class="navbar-end gap-2">
+
+        <!-- Dark / Light Mode Button -->
+        <button onclick="toggleTheme()" class="btn btn-ghost btn-circle">
+
+          <!-- moon icon -->
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+
+            <path stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 12.79A9 9 0 0111.21 3
+        7 7 0 1018 20a9 9 0 003-7.21z" />
+
+          </svg>
+
+        </button>
+
+        <!-- Translate Button -->
+        <button class="btn btn-ghost gap-2 text-base">
+          <img src="/graphics/GoogleTranslateLogo.png" class="h-7">
+          Translate
+        </button>
+
+        <!-- Search -->
+        <div class="relative">
+
+          <input
+            type="text"
+            placeholder="Search"
+            class="input input-bordered rounded-full pl-4 pr-10 w-56">
+
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 absolute right-3 top-3 opacity-60"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+
+            <path stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15
+        7.5 7.5 0 0 1 0 15z" />
+
+          </svg>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- tester-->
+    <div class="flex max-w-7xl mx-auto mt-8 gap-6">
+
+      <div class="w-64 bg-base-100 shadow rounded-box p-4 h-fit">
+
+        <ul class="menu">
+          <li class="menu-title">Navigation</li>
+          <li><a href="billpay.html" class="active">Bill Pay</a></li>
+          <li><a>Events Calendar</a></li>
+          <li><a>Department Contacts</a></li>
+          <li><a>Visit Shawnee</a></li>
+          <li><a>Employment</a></li>
+          <li><a>Parks</a></li>
+          <li><a>Adopt a Pet</a></li>
+          <li><a>Citizen Request Portal</a></li>
+        </ul>
+
+      </div>
+
+      <div class="flex-1 bg-base-100 shadow rounded-box p-6">
+
+  <div class="text-sm breadcrumbs mb-2">
+    <ul>
+      <li><a href="homepage.html">Home</a></li>
+      <li>Bill Pay</li>
+    </ul>
+  </div>
+
+  <h2 class="text-2xl font-bold mb-4">Bill Pay</h2>
+
+  <p class="mb-6">
+    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+    faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
+    pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
+    tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+    Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
+    hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
+    per conubia nostra inceptos himenaeos.
+  </p>
+
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <div class="bg-base-200 p-6 rounded-box text-center">
+      <h3 class="text-xl font-semibold mb-2">Quick Pay</h3>
+      <p class="mb-4">Pay your bill without register an account</p>
+      <a href="#" class="btn btn-primary w-full">Pay Now</a>
+    </div>
+
+    <div class="bg-base-200 p-6 rounded-box text-center">
+      <h3 class="text-xl font-semibold mb-2">Create Account</h3>
+      <p class="mb-4">Register an account to manage payments, view history, and have monthly payment set up.</p>
+      <a href="#" class="btn btn-secondary w-full">Sign Up</a>
+    </div>
+
+  </div>
+
+  <div class="overflow-x-auto mt-6">
+    <table class="table">
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-base-100 p-1 mt-8">
+
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between gap-10 flex-wrap">
+
+        <!-- Left Section -->
+        <div class="flex items-start gap-4">
+
+          <a href="homepage.html">
+            <img src="/graphics/ShawneeLogo.png" class="h-16 cursor-pointer">
+          </a>
+
+          <div>
+            <p class="font-bold">CITY HALL | 16 West 9th Street</p>
+            <p>Shawnee, OK 74801-6812</p>
+          </div>
+
+        </div>
+
+        <!-- Middle Section (Buttons) -->
+        <div class="grid grid-cols-2 gap-x-6 gap-y-0.1">
+
+          <button class="btn btn-ghost">Action Center</button>
+          <button class="btn btn-ghost">Pay Online</button>
+
+          <button class="btn btn-ghost">Fire Department</button>
+          <button class="btn btn-ghost">Parks & Recreation</button>
+
+          <button class="btn btn-ghost">Police Department</button>
+          <button class="btn btn-ghost">Pay My Bills</button>
+
+        </div>
+
+        <!-- Right Section -->
+        <div class="flex items-center gap-6">
+
+          <!-- Social Icons -->
+          <div class="flex gap-2">
+
+            <button class="btn btn-square btn-error text-white"><img
+                src="/graphics/YTLogo.png"></button>
+            <button class="btn btn-square btn-info text-white"><img
+                src="/graphics/TwitterLogo.png"></button>
+            <button
+              class="btn btn-square btn-primary bg-blue-600 text-white"><img
+                src="/graphics/FacebookLogo.png"></button>
+
+          </div>
+
+          <!-- Share / Subscribe -->
+          <div class="flex flex-col gap-2">
+
+            <button class="btn btn-primary gap-2">
+              Share 🔗
+            </button>
+
+            <button class="btn btn-primary gap-2">
+              Subscribe ▶
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </footer>
+
+  </body>
+</html>
