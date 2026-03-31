@@ -95,7 +95,7 @@
           <details>
             <summary>How Do I?</summary>
             <ul>
-              <li><a href="#">Pay Bill</a></li>
+              <li><a href="billpay.html">Pay Bill</a></li>
               <li><a href="#">Apply Permit</a></li>
               <li><a href="#">Report Issue</a></li>
             </ul>
@@ -145,7 +145,7 @@
     <div class="dropdown dropdown-hover">
       <label tabindex="0" class="cursor-pointer">How Do I?</label>
       <ul class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a href="#">Pay Bill</a></li>
+        <li><a href="billpay.html">Pay Bill</a></li>
         <li><a href="#">Apply Permit</a></li>
         <li><a href="#">Report Issue</a></li>
       </ul>
@@ -216,11 +216,14 @@
 
     <div class="grid grid-cols-4 w-[900px] gap-2">
 
-      <button class="bg-blue-600 text-white py-6 border border-blue-400
-                    transition duration-300 ease-in-out
-                    hover:bg-blue-700 hover:shadow-xl hover:scale-105">
-        Bill Pay
-      </button>
+      <a
+        href="billpay.html"
+        class="bg-blue-600 text-white py-6 border border-blue-400
+              flex items-center justify-center text-center
+              transition duration-300 ease-in-out
+              hover:bg-blue-700 hover:shadow-xl hover:scale-105"
+      >Bill Pay
+      </a>
 
       <button class="bg-blue-600 text-white py-6 border border-blue-400
                     transition duration-300 ease-in-out
@@ -472,14 +475,20 @@
       <!-- Middle Section (Buttons) -->
       <div class="grid grid-cols-2 gap-x-6 gap-y-0.1">
 
-        <button class="btn btn-ghost">Action Center</button>
-        <button class="btn btn-ghost">Pay Online</button>
+        <a 
+          href="https://citizen-request-cityofshawneeok.hub.arcgis.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-ghost">
+          Action Center
+        </a>
+        <a href="news.html" class="btn btn-ghost">News</a>
 
-        <button class="btn btn-ghost">Fire Department</button>
-        <button class="btn btn-ghost">Parks & Recreation</button>
+        <a href="fire.html" class="btn btn-ghost">Fire Department</a>
+        <a href="parks.html" class="btn btn-ghost">Parks & Recreation</a>
 
-        <button class="btn btn-ghost">Police Department</button>
-        <button class="btn btn-ghost">Pay My Bills</button>
+        <a href="police.html" class="btn btn-ghost">Police Department</a>
+        <a href="billpay.html" class="btn btn-ghost">Pay My Bills</a>
 
       </div>
 
