@@ -9,6 +9,8 @@ function googleTranslateElementInit() {
 // if change to en
 function googleTranslate(lang) {
     if (lang === 'en') {
+        //KEEP THIS. it clear cookies for the website
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         return location.reload();
     }
     const temgoogle = document.querySelector(".goog-te-combo");
