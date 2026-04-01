@@ -39,8 +39,15 @@
   }
   </script>
 </head>
-
+<!-- Old sciprt to hide feedbacks for google translate webwidget-->
+    <link rel="stylesheet" href="css/googletranslate.css">
+    <!-- This is google transalt functions-->
+    <script src="scripts/googletranslate.js"></script>
+    <script
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ 
 <body class="bg-[url('../graphics/GovPageBackground.jpg')] bg-cover bg-center bg-fixed min-h-screen flex flex-col">
+    <div id="google_translate_element" class="hidden"></div>
 
   <!-- Header -->
   <header class="navbar bg-base-100 px-8 shadow sticky top-0 w-full z-50">
@@ -176,11 +183,21 @@
 
     </button>
 
-    <!-- Translate Button -->
-    <button class="btn btn-ghost gap-2 text-base">
-      <img src="/graphics/GoogleTranslateLogo.png" class="h-7">
-      Translate
-    </button>
+     <!-- Translate Button -->
+        <div class="dropdown dropdown-end">
+          <button class="btn btn-ghost gap-2 text-base flex-nowrap ">
+            <img src="/graphics/GoogleTranslateLogo.png"
+              class="h-7 shrink-0 min-w-[2rem]">
+            <span class="hidden sm:inline">Translate</span>
+          </button>
+          <ul tabindex="0"
+            class="dropdown-content menu p-2 bg-base-100 rounded-box w-52">
+            <li><a onclick="googleTranslate('en')">English</a></li>
+            <li><a onclick="googleTranslate('es')">Spanish</a></li>
+            <li><a onclick="googleTranslate('fr')">French</a></li>
+            <li><a onclick="googleTranslate('ca')">Catalan</a></li>
+          </ul>
+        </div>
 
     <!-- Search -->
     <div class="relative">
