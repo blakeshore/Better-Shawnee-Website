@@ -40,6 +40,8 @@
     <script src="scripts/googletranslate.js"></script>
     <script
       src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      <script src="data/newsData.js"></script>
+<script src="scripts/renderinfo.js"></script>
 </head>
 
 <body class="bg-[url('../graphics/HomepageSunsetBackground.jpg')] bg-cover bg-center bg-fixed min-h-screen flex flex-col">
@@ -293,81 +295,11 @@
       <!-- Header -->
       <div class="flex justify-between items-center bg-pink-600 text-white px-6 py-3">
         <h2 class="text-2xl font-bold">Recent News</h2>
-        <a href="#" class="text-sm hover:underline">All News</a>
+        <a href="news.html" class="text-sm hover:underline">All News</a>
       </div>
 
       <!-- List -->
-      <div class="p-6 space-y-5 flex-grow bg-base-200">
-
-        <div class="flex items-start gap-4 p-3 rounded transition duration-200 hover:bg-base-100 group">
-
-          <svg class="w-10 h-10 text-pink-600 transition-transform duration-200 group-hover:translate-x-1"
-          fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-            <path d="M4 4h16v16H4z"/>
-            <path d="M8 8h8M8 12h8M8 16h4"/>
-          </svg>
-
-          <div>
-            <a href="news1.html" class="font-semibold text-lg hover:underline">
-              Headline 1 (most recent)
-            </a>
-            <p class="text-sm italic text-base-content/70">Post Date 1</p>
-          </div>
-
-        </div>
-
-        <div class="flex items-start gap-4 p-3 rounded transition duration-200 hover:bg-base-100 group">
-
-          <svg class="w-10 h-10 text-pink-600 transition-transform duration-200 group-hover:translate-x-1"
-          fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-            <path d="M4 4h16v16H4z"/>
-            <path d="M8 8h8M8 12h8M8 16h4"/>
-          </svg>
-
-          <div>
-            <a href="#" class="font-semibold text-lg hover:underline">
-              Headline 2
-            </a>
-            <p class="text-sm italic text-base-content/70">Post Date 2</p>
-          </div>
-
-        </div>
-
-        <div class="flex items-start gap-4 p-3 rounded transition duration-200 hover:bg-base-100 group">
-
-          <svg class="w-10 h-10 text-pink-600 transition-transform duration-200 group-hover:translate-x-1"
-          fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-            <path d="M4 4h16v16H4z"/>
-            <path d="M8 8h8M8 12h8M8 16h4"/>
-          </svg>
-
-          <div>
-            <a href="#" class="font-semibold text-lg hover:underline">
-              Headline 3
-            </a>
-            <p class="text-sm italic text-base-content/70">Post Date 3</p>
-          </div>
-
-        </div>
-
-        <div class="flex items-start gap-4 p-3 rounded transition duration-200 hover:bg-base-100 group">
-
-          <svg class="w-10 h-10 text-pink-600 transition-transform duration-200 group-hover:translate-x-1"
-          fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-            <path d="M4 4h16v16H4z"/>
-            <path d="M8 8h8M8 12h8M8 16h4"/>
-          </svg>
-
-          <div>
-            <a href="#" class="font-semibold text-lg hover:underline">
-              Headline 4
-            </a>
-            <p class="text-sm italic text-base-content/70">Post Date 4</p>
-          </div>
-
-        </div>
-
-      </div>
+      <div id="recentnew" class="p-6 space-y-5 flex-grow bg-base-200"></div>
 
     </div>
 
@@ -559,7 +491,9 @@
     </div>
 
   </footer>
-
+    <script>
+  showRecentNew();
+</script>
 </body>
 
 <script>
