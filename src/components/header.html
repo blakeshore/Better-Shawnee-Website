@@ -1,0 +1,124 @@
+<header class="navbar bg-base-100 px-8 shadow sticky top-0 w-full z-50">
+  <div class="navbar-start lg:hidden">
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost">☰</label>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[60] p-3 shadow bg-base-100 rounded-box w-72">
+        <li><a href="homepage.html">Home</a></li>
+        <li>
+          <details>
+            <summary>Government</summary>
+            <ul>
+              <li><a href="mayor.html">Mayor</a></li>
+              <li><a href="city_commission.html">City Commission</a></li>
+              <li><a href="departments.html">Departments</a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Services</summary>
+            <ul>
+              <li><a href="utilities.html">Utilities</a></li>
+              <li><a href="permits.html">Permits</a></li>
+              <li><a href="trash_pickup.html">Trash Pickup</a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Community</summary>
+            <ul>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="parks.html">Parks</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>How Do I?</summary>
+            <ul>
+              <li><a href="billpay.html">Pay Bill</a></li>
+              <li><a href="permits.html">Apply Permit</a></li>
+              <li><a href="report_issue.html">Report Issue</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="navbar-start hidden lg:flex">
+    <a href="homepage.html">
+      <img src="../graphics/ShawneeLogo.png" class="h-14" alt="Logo">
+    </a>
+  </div>
+
+  <div class="navbar-center hidden lg:flex gap-8 text-lg">
+    <div class="dropdown dropdown-hover">
+      <label tabindex="0" class="cursor-pointer">Government</label>
+      <ul class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="mayor.html">Mayor</a></li>
+        <li><a href="city_commission.html">City Commission</a></li>
+        <li><a href="departments.html">Departments</a></li>
+      </ul>
+    </div>
+
+    <div class="dropdown dropdown-hover">
+      <label tabindex="0" class="cursor-pointer">Services</label>
+      <ul class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="utilities.html">Utilities</a></li>
+        <li><a href="permits.html">Permits</a></li>
+        <li><a href="trash_pickup.html">Trash Pickup</a></li>
+      </ul>
+    </div>
+
+    <div class="dropdown dropdown-hover">
+      <label tabindex="0" class="cursor-pointer">Community</label>
+      <ul class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="events.html">Events</a></li>
+        <li><a href="parks.html">Parks</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </div>
+
+    <div class="dropdown dropdown-hover">
+      <label tabindex="0" class="cursor-pointer">How Do I?</label>
+      <ul class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="billpay.html">Pay Bill</a></li>
+        <li><a href="permits.html">Apply Permit</a></li>
+        <li><a href="report_issue.html">Report Issue</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="navbar-end gap-2">
+    <button onclick="toggleTheme()" class="btn btn-ghost btn-circle ml-12">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 0111.21 3 7 7 0 1018 20a9 9 0 003-7.21z"/>
+      </svg>
+    </button>
+
+    <div class="dropdown dropdown-end">
+      <button class="btn btn-ghost gap-2 text-base flex-nowrap ">
+        <img src="../graphics/GoogleTranslateLogo.png" class="h-7 shrink-0 min-w-[2rem]">
+        <span class="hidden sm:inline">Translate</span>
+      </button>
+      <ul tabindex="0" class="dropdown-content menu p-2 bg-base-100 rounded-box w-52">
+        <li><a onclick="googleTranslate('en')">English</a></li>
+        <li><a onclick="googleTranslate('es')">Spanish</a></li>
+        <li><a onclick="googleTranslate('fr')">French</a></li>
+        <li><a onclick="googleTranslate('ca')">Catalan</a></li>
+      </ul>
+    </div>
+
+    <form action="search.html" method="GET" class="relative">
+      <input type="text" name="q" id="searchInput" placeholder="Search" class="input input-bordered rounded-full pl-4 pr-10 w-36 lg:w-36 xl:w-56">
+      <button type="submit" class="absolute right-3 top-1/2 -translate-y-1/2" aria-label="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z"/>
+        </svg>
+      </button>
+    </form>
+  </div>
+</header>

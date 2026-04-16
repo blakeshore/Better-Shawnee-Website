@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Permits - City of Shawnee</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+  });
+  </script>
+  <script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    html.setAttribute("data-theme", html.getAttribute("data-theme") == "dark" ? "light" : "dark");
+  }
+  </script>
+  <script src="scripts/siteparts.js"></script>
+  <link rel="stylesheet" href="css/googletranslate.css">
+  <script src="scripts/googletranslate.js"></script>
+  <script src="scripts/siteparts.js"></script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body class="bg-[url('../graphics/HomepageSunsetBackground.jpg')] bg-cover bg-center bg-fixed min-h-screen flex flex-col">
+  <div id="google_translate_element" class="hidden"></div>
+  <div id="site-header"></div>
+
+  <main class="flex-1">
+    <div class="flex max-w-7xl mx-auto mt-8 gap-6">
+
+      <div class="w-64 bg-base-100 shadow rounded-box p-4 h-fit">
+        <ul class="menu">
+          <li class="menu-title">Navigation</li>
+          <li><a href="billpay.html">Bill Pay</a></li>
+          <li><a href="utilities.html">Utilities</a></li>
+          <li><a href="permits.html">Permits</a></li>
+          <li><a href="trash_pickup.html">Trash Pickup</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="parks.html">Parks</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="report_issue.html">Report Issue</a></li>
+        </ul>
+      </div>
+
+      <div class="flex-1 bg-base-100 shadow rounded-box p-6">
+        
+<div class="text-sm breadcrumbs mb-2"><ul><li><a href="homepage.html">Home</a></li><li>Permits</li></ul></div>
+<h2 class="text-2xl font-bold mb-4">Permits</h2>
+<p class="mb-6">Building, electrical, plumbing, and other permits are handled through the Community Development department.</p>
+<div class="grid md:grid-cols-2 gap-6 mb-6">
+  <div class="bg-base-200 p-6 rounded-box text-center">
+    <h3 class="text-xl font-semibold mb-2">Apply for a Permit</h3>
+    <p class="mb-4">Submit a new permit application online.</p>
+    <a href="#" class="btn btn-primary w-full">Apply Now</a>
+  </div>
+  <div class="bg-base-200 p-6 rounded-box text-center">
+    <h3 class="text-xl font-semibold mb-2">Check Permit Status</h3>
+    <p class="mb-4">Look up the status of a permit you already submitted.</p>
+    <a href="#" class="btn btn-secondary w-full">Check Status</a>
+  </div>
+</div>
+<div class="bg-base-200 p-4 rounded-xl">
+  <p class="font-bold mb-1">Questions?</p>
+  <p class="text-sm">Contact Community Development at (405) 000-0000 or <a href="mailto:permits@shawneeok.org" class="link link-primary">permits@shawneeok.org</a>.</p>
+</div>
+
+      </div>
+
+    </div>
+  </main>
+  <div id="site-footer"></div>
+
+</body>
+</html>

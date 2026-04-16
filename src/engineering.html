@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engineering - City of Shawnee</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+  });
+  </script>
+  <script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    html.setAttribute("data-theme", html.getAttribute("data-theme") == "dark" ? "light" : "dark");
+  }
+  function toggleSubmenu(id, button) {
+    const target = document.getElementById(id);
+    const isOpening = target.classList.contains("hidden");
+    document.querySelectorAll(".submenu").forEach(s => s.classList.add("hidden"));
+    document.querySelectorAll(".submenu-arrow").forEach(i => i.classList.remove("rotate-180"));
+    if (isOpening) {
+      target.classList.remove("hidden");
+      button.querySelector(".submenu-arrow").classList.add("rotate-180");
+    }
+  }
+  </script>
+  <script src="scripts/siteparts.js"></script>
+  <link rel="stylesheet" href="css/googletranslate.css">
+  <script src="scripts/googletranslate.js"></script>
+  <script src="scripts/siteparts.js"></script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body class="bg-[url('../graphics/GovPageBackground.jpg')] bg-cover bg-center bg-fixed min-h-screen flex flex-col">
+  <div id="google_translate_element" class="hidden"></div>
+  <div id="site-header"></div>
+
+  <main class="flex-1 mt-8">
+    <div class="w-full max-w-7xl mx-auto px-4">
+      <div class="flex min-h-[70vh] bg-base-200 rounded-2xl shadow-lg">
+
+        <aside class="w-64 m-4 mr-0 self-stretch bg-base-100 rounded-xl shadow-md p-3">
+          <nav>
+            <ul class="space-y-2">
+              <li><a href="mayor.html" class="block px-4 py-2 rounded-lg hover:bg-base-300">Mayor</a></li>
+              <li>
+                <div class="flex items-center justify-between rounded-lg hover:bg-base-300">
+                  <a href="city_commission.html" class="flex-1 px-4 py-2">City Commission</a>
+                  <button type="button" class="px-3 py-2" onclick="toggleSubmenu('submenu-commission', this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="submenu-arrow w-4 h-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                  </button>
+                </div>
+                <ul id="submenu-commission" class="submenu hidden ml-4 mt-1 space-y-1">
+                  <li><a href="meeting_videos.html" class="block px-3 py-1 rounded-md text-sm hover:bg-base-300">Meeting Videos</a></li>
+                </ul>
+              </li>
+              <li>
+                <div class="flex items-center justify-between rounded-lg hover:bg-base-300">
+                  <a href="departments.html" class="flex-1 px-4 py-2">Departments</a>
+                  <button type="button" class="px-3 py-2" onclick="toggleSubmenu('submenu-departments', this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="submenu-arrow w-4 h-4 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                  </button>
+                </div>
+                <ul id="submenu-departments" class="submenu hidden ml-4 mt-1 space-y-1">
+                  <li><a href="airport.html" class="block px-3 py-1 rounded-md text-sm hover:bg-base-300">Airport</a></li>
+                  <li><a href="animal_welfare.html" class="block px-3 py-1 rounded-md text-sm hover:bg-base-300">Animal Welfare</a></li>
+                  <li><a href="city_clerk.html" class="block px-3 py-1 rounded-md text-sm hover:bg-base-300">City Clerk</a></li>
+                  <li><a href="city_manager.html" class="block px-3 py-1 rounded-md text-sm hover:bg-base-300">City Manager</a></li>
+                  <li><a href="community_development.html" class="block px-3 py-1 rounded-md text-sm hover:bg-base-300">Community Development</a></li>
+                  <li><a href="emergency_management.html" class="block px-3 py-1 rounded-md text-sm hover:bg-base-300">Emergency Management</a></li>
+                  <li><a href="engineering.html" class="block px-3 py-1 rounded-md text-sm hover:bg-base-300">Engineering</a></li>
+                  <li><a href="finance.html" class="block px-3 py-1 rounded-md text-sm hover:bg-base-300">Finance</a></li>
+                  <li><a href="fire.html" class="block px-3 py-1 rounded-md text-sm hover:bg-base-300">Fire</a></li>
+                  <li><a href="human_resources.html" class="block px-3 py-1 rounded-md text-sm hover:bg-base-300">Human Resources</a></li>
+                  <li><a href="information_technology.html" class="block px-3 py-1 rounded-md text-sm hover:bg-base-300">Information Technology</a></li>
+                  <li><a href="municipal_court.html" class="block px-3 py-1 rounded-md text-sm hover:bg-base-300">Municipal Court</a></li>
+                  <li><a href="parks.html" class="block px-3 py-1 rounded-md text-sm hover:bg-base-300">Parks</a></li>
+                  <li><a href="police.html" class="block px-3 py-1 rounded-md text-sm hover:bg-base-300">Police</a></li>
+                  <li><a href="public_works.html" class="block px-3 py-1 rounded-md text-sm hover:bg-base-300">Public Works</a></li>
+                  <li><a href="tourism.html" class="block px-3 py-1 rounded-md text-sm hover:bg-base-300">Tourism</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+
+        <section class="flex-1 m-4 bg-base-100 rounded-xl shadow-md px-6 py-1">
+          
+<div class="breadcrumbs text-sm mb-2"><ul><li><a href="homepage.html">Home</a></li><li><a href="departments.html">Departments</a></li><li>Engineering</li></ul></div>
+<h1 class="text-2xl font-bold mb-4">Engineering</h1>
+<p class="mb-4">The Engineering department plans and oversees infrastructure projects including roads, bridges, and drainage.</p>
+<div class="bg-base-200 p-4 rounded-xl mb-4">
+  <p class="font-bold mb-1">Contact</p>
+  <p class="text-sm">Phone: (405) 000-0000</p>
+  <p class="text-sm">Email: <a href="mailto:department@shawneeok.org" class="link link-primary">department@shawneeok.org</a></p>
+  <p class="text-sm">Hours: Monday–Friday, 8:00 AM – 5:00 PM</p>
+</div>
+<p class="mt-4"></p>
+
+        </section>
+
+      </div>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+
+</body>
+</html>

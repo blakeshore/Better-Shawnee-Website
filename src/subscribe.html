@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscribe - City of Shawnee</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      } else {
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="css/googletranslate.css">
+  <script src="scripts/googletranslate.js"></script>
+  <script src="scripts/siteparts.js"></script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body class="bg-[url('../graphics/HomepageSunsetBackground.jpg')] bg-cover bg-center bg-fixed min-h-screen flex flex-col">
+  <div id="google_translate_element" class="hidden"></div>
+  <div id="site-header"></div>
+
+  <main class="flex-1 flex items-center justify-center px-4 py-10">
+    <div class="card w-full max-w-2xl bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h1 class="card-title text-3xl">Subscribe</h1>
+        <p>Put the city newsletter form or email signup here.</p>
+        <div class="grid gap-4 mt-4">
+          <label class="form-control w-full">
+            <div class="label"><span class="label-text">Name</span></div>
+            <input type="text" placeholder="Your name" class="input input-bordered w-full" />
+          </label>
+          <label class="form-control w-full">
+            <div class="label"><span class="label-text">Email</span></div>
+            <input type="email" placeholder="name@email.com" class="input input-bordered w-full" />
+          </label>
+          <button class="btn btn-primary w-fit">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>
