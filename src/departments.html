@@ -6,27 +6,16 @@
   <title>Departments - City of Shawnee</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
-  });
-  </script>
-  <script>
-  function toggleTheme() {
-    const html = document.documentElement;
-    html.setAttribute("data-theme", html.getAttribute("data-theme") == "dark" ? "light" : "dark");
-  }
-  function toggleSubmenu(id, button) {
-    const target = document.getElementById(id);
-    const isOpening = target.classList.contains("hidden");
-    document.querySelectorAll(".submenu").forEach(s => s.classList.add("hidden"));
-    document.querySelectorAll(".submenu-arrow").forEach(i => i.classList.remove("rotate-180"));
-    if (isOpening) {
-      target.classList.remove("hidden");
-      button.querySelector(".submenu-arrow").classList.add("rotate-180");
-    }
-  }
+<script>
+    (function () {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      } else {
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+      }
+    })();
   </script>
   <script src="scripts/siteparts.js"></script>
   <link rel="stylesheet" href="css/googletranslate.css">
