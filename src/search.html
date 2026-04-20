@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="css/googletranslate.css">
     <!-- This is google transalt functions-->
     <script src="scripts/googletranslate.js"></script>
-  <script src="scripts/siteparts.js"></script>
+    <script src="scripts/siteparts.js"></script>
     <script
       src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
@@ -45,8 +45,157 @@
 <body class="bg-[url('../graphics/SearchPageBackground.jpg')] bg-cover bg-center bg-fixed min-h-screen flex flex-col">
 <div id="google_translate_element" class="hidden"></div>
   <!-- Header -->
-  <div id="site-header"></div>
- 
+  <header class="navbar bg-base-100 px-8 shadow sticky top-0 w-full z-50">
+  <!-- Mobile menu -->
+  <div class="navbar-start lg:hidden">
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost">☰</label>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[60] p-3 shadow bg-base-100 rounded-box w-72">
+        <!-- Homepage -->
+        <li><a href="homepage.html">Home</a></li>
+        <!-- Government -->
+        <li>
+          <details>
+            <summary>Government</summary>
+            <ul>
+              <li><a href="mayor.html">Mayor</a></li>
+              <li><a href="city_commission.html">City Commission</a></li>
+              <li><a href="departments.html">Departments</a></li>
+            </ul>
+          </details>
+        </li>
+         <!-- Services -->
+        <li>
+          <details>
+            <summary>Services</summary>
+            <ul>
+              <li><a href="utilities.html">Utilities</a></li>
+              <li><a href="permits.html">Permits</a></li>
+              <li><a href="trash_pickup.html">Trash Pickup</a></li>
+            </ul>
+          </details>
+        </li>
+         <!-- Community -->
+        <li>
+          <details>
+            <summary>Community</summary>
+            <ul>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="parks.html">Parks</a></li>
+              <li><a href="news.html">News</a></li>
+            </ul>
+          </details>
+        </li>
+        <!-- How Do I? -->
+        <li>
+          <details>
+            <summary>How Do I?</summary>
+            <ul>
+              <li><a href="billpay.html">Pay Bill</a></li>
+              <li><a href="permits.html">Apply Permit</a></li>
+              <li><a href="report_issue.html">Report Issue</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Logo -->
+  <div class="navbar-start hidden lg:flex">
+    <a href="homepage.html">
+      <img src="../graphics/ShawneeLogo.png" class="h-14" alt="Logo">
+    </a>
+  </div>
+
+  <!-- Navigation -->
+  <div class="navbar-center hidden lg:flex gap-8 text-lg">
+    <div class="dropdown dropdown-hover">
+      <label tabindex="0" class="cursor-pointer">Government</label>
+      <ul class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="mayor.html">Mayor</a></li>
+        <li><a href="city_commission.html">City Commission</a></li>
+        <li><a href="departments.html">Departments</a></li>
+      </ul>
+    </div>
+
+    <div class="dropdown dropdown-hover">
+      <label tabindex="0" class="cursor-pointer">Services</label>
+      <ul class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="utilities.html">Utilities</a></li>
+        <li><a href="permits.html">Permits</a></li>
+        <li><a href="trash_pickup.html">Trash Pickup</a></li>
+      </ul>
+    </div>
+
+    <div class="dropdown dropdown-hover">
+      <label tabindex="0" class="cursor-pointer">Community</label>
+      <ul class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="events.html">Events</a></li>
+        <li><a href="parks.html">Parks</a></li>
+        <li><a href="news.html">News</a></li>
+      </ul>
+    </div>
+
+    <div class="dropdown dropdown-hover">
+      <label tabindex="0" class="cursor-pointer">How Do I?</label>
+      <ul class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="billpay.html">Pay Bill</a></li>
+        <li><a href="permits.html">Apply Permit</a></li>
+        <li><a href="report_issue.html">Report Issue</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Right side controls -->
+  <div class="navbar-end gap-2">
+    <!-- Dark / Light Mode Button -->
+    <button onclick="toggleTheme()" class="btn btn-ghost btn-circle ml-12">
+       <!-- moon icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 0111.21 3 7 7 0 1018 20a9 9 0 003-7.21z"/>
+      </svg>
+    </button>
+
+    <!-- Translate Button -->
+    <div class="dropdown dropdown-end">
+      <button class="btn btn-ghost gap-2 text-base flex-nowrap ">
+        <img src="../graphics/GoogleTranslateLogo.png" class="h-7 shrink-0 min-w-[2rem]">
+        <span class="hidden sm:inline">Translate</span>
+      </button>
+      <ul tabindex="0" class="dropdown-content menu p-2 bg-base-100 rounded-box w-52">
+        <li><a onclick="googleTranslate('en')">English</a></li>
+        <li><a onclick="googleTranslate('es')">Spanish</a></li>
+        <li><a onclick="googleTranslate('fr')">French</a></li>
+        <li><a onclick="googleTranslate('ca')">Catalan</a></li>
+      </ul>
+    </div>
+
+    <!-- Search -->
+    <form action="search.html" method="GET" class="relative">
+      <input
+        type="text"
+        name="q"
+        id="searchInput"
+        placeholder="Search"
+        class="input input-bordered rounded-full pl-4 pr-10 w-36 lg:w-36 xl:w-56"
+      >
+      <button
+        type="submit"
+        class="absolute right-3 top-1/2 -translate-y-1/2"
+        aria-label="Search"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 opacity-60"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z"/>
+        </svg>
+      </button>
+      </form>
+    </div>
+  </header>
+  
   <!-- Main -->
   <main class="flex-1 mt-8">
     <div class="w-full max-w-5xl mx-auto px-4">
@@ -73,5 +222,114 @@
   <div id="site-footer"></div>
 
 </body>
+
+<!-- Search script-->
+<script>
+    //List of all possible results
+    //Note: Searching a subset of a keyword will result in the search term
+    const searchData = [
+      //Homepage buttons
+      { title: "Bill Pay", url: "billpay.html", keywords: ["bill", "pay", "payments", "utility bill"] },
+      { title: "Events Calendar", url: "events.html", keywords: ["events", "calendar", "community events"] },
+      { title: "Department Contacts", url: "departments.html", keywords: ["departments", "contacts", "directory"] },
+      { title: "Visit Shawnee", url: "https://www.visitshawnee.com", keywords: ["visit", "tourism", "shawnee", "travel"] },
+      { title: "Employment", url: "employment.html", keywords: ["jobs", "employment", "careers"] },
+      { title: "Parks", url: "parks.html", keywords: ["parks", "recreation", "playgrounds"] },
+      { title: "Adopt a Pet", url: "adopt_a_pet.html", keywords: ["adopt", "pet", "animal", "animals"] },
+      { title: "Citizen Request Portal", url: "citizen_request_portal.html", keywords: ["citizen request", "request", "portal", "report issue"] },
+
+      //Government
+      { title: "Mayor", url: "mayor.html", keywords: ["city mayor", "leader", "eric stephens"] },
+      { title: "City Commission", url: "city_commission.html", keywords: ["city commission", "wards", "ward map"] },
+      { title: "Ward 1 Commissioner", url: "ward_1_commissioner.html", keywords: ["ward 1 city commissioner", "daniel matthews"] },
+      { title: "Ward 2 Commissioner", url: "ward_2_commissioner.html", keywords: ["ward 2 city commissioner", "greta shuler"] },
+      { title: "Ward 3 Commissioner", url: "ward_3_commissioner.html", keywords: ["ward 3 city commissioner", "chris odneal"] },
+      { title: "Ward 4 Commissioner", url: "ward_4_commissioner.html", keywords: ["ward 4 city commissioner", "ashley fichtner"] },
+      { title: "Ward 5 Commissioner", url: "ward_5_commissioner.html", keywords: ["ward 5 city commissioner", "mark sehorn"] },
+      { title: "Ward 6 Commissioner", url: "ward_6_commissioner.html", keywords: ["ward 6 city commissioner", "lauren richter"] },
+      { title: "Meeting Videos", url: "meeting_vidoes.html", keywords: ["meetings", "meeting videos"] },
+      { title: "Departments", url: "departments.html", keywords: ["departments", "depts"] },
+
+      //Departments
+      { title: "Airport", url: "airport.html", keywords: ["airport", "air", "plane", "fly"] },
+      { title: "Animal Welfare", url: "animal_welfare.html", keywords: ["animal welfare", "animals", "pets", "animal control"] },
+      { title: "City Clerk", url: "city_clerk.html", keywords: ["city clerk", "records", "documents"] },
+      { title: "City Manager", url: "city_manager.html", keywords: ["city manager", "administration"] },
+      { title: "Community Development", url: "community_development.html", keywords: ["community development", "planning", "zoning"] },
+      { title: "Emergency Management", url: "emergency_management.html", keywords: ["emergency", "management", "preparedness"] },
+      { title: "Engineering", url: "engineering.html", keywords: ["engineering", "infrastructure"] },
+      { title: "Finance", url: "finance.html", keywords: ["finance", "budget", "accounts"] },
+      { title: "Fire", url: "fire.html", keywords: ["fire", "fire department", "emergency response"] },
+      { title: "Human Resources", url: "human_resources.html", keywords: ["human resources", "hr", "employment"] },
+      { title: "Information Technology", url: "information_technology.html", keywords: ["it", "information technology", "technology"] },
+      { title: "Municipal Court", url: "municipal_court.html", keywords: ["court", "municipal court", "tickets"] },
+      { title: "Police", url: "police.html", keywords: ["police", "law enforcement", "safety"] },
+      { title: "Public Works", url: "public_works.html", keywords: ["public works", "streets", "sanitation"] },
+      { title: "Tourism", url: "tourism.html", keywords: ["tourism", "visit shawnee", "visitors", "visit"] },
+
+      //Services
+
+      //Community
+
+      //How do I?
+
+      //Other
+      { title: "Action Center", url: "https://citizen-request-cityofshawneeok.hub.arcgis.com/", keywords: ["action center"] }
+    ];
+
+    const params = new URLSearchParams(window.location.search);
+    const query = (params.get("q") || "").trim().toLowerCase();
+
+    const queryText = document.getElementById("queryText");
+    const resultsList = document.getElementById("resultsList");
+    const resultsCount = document.getElementById("resultsCount");
+    const noResults = document.getElementById("noResults");
+    const searchInput = document.getElementById("searchInput");
+
+    queryText.textContent = query || "Nothing entered";
+    searchInput.value = query;
+
+    function matchesQuery(item, q) {
+      if (!q) return false;
+
+      const haystack = [
+        item.title.toLowerCase(),
+        item.url.toLowerCase(),
+        ...item.keywords.map(k => k.toLowerCase())
+      ];
+
+      return haystack.some(text => text.includes(q));
+    }
+
+    const results = searchData.filter(item => matchesQuery(item, query));
+
+    if (!query) {
+      resultsCount.textContent = "Enter a search term in the search box.";
+      noResults.classList.add("hidden");
+    } else if (results.length === 0) {
+      resultsCount.textContent = "0 results found.";
+      noResults.classList.remove("hidden");
+    } else {
+      resultsCount.textContent = `${results.length} result${results.length === 1 ? "" : "s"} found.`;
+
+      results.forEach(item => {
+        const resultCard = document.createElement("a");
+        resultCard.href = item.url;
+        resultCard.className = "block rounded-xl border border-base-300 bg-base-200 p-4 transition hover:bg-base-300 hover:shadow-md";
+
+        const title = document.createElement("div");
+        title.className = "text-lg font-semibold";
+        title.textContent = item.title;
+
+        const url = document.createElement("div");
+        url.className = "text-sm text-base-content/70 mt-1";
+        url.textContent = item.url;
+
+        resultCard.appendChild(title);
+        resultCard.appendChild(url);
+        resultsList.appendChild(resultCard);
+      });
+    }
+</script>
 
 </html>

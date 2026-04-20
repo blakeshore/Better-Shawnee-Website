@@ -26,6 +26,37 @@ function setShareLinks() {
   if (email) email.href = `mailto:?subject=${pageTitle}&body=${pageUrl}`;
 }
 
+//For making submenus in the left side nav bar on content pages
+function toggleSubmenu(id, button) {
+  const target = document.getElementById(id);
+  const isOpening = target.classList.contains("hidden");
+
+    // Close all submenus
+    document.querySelectorAll(".submenu").forEach((submenu) => {
+      submenu.classList.add("hidden");
+    });
+
+    // Reset all arrows
+    document.querySelectorAll('button[aria-controls] svg').forEach((icon) => {
+      icon.classList.remove("rotate-180");
+    });
+
+    document.querySelectorAll('button[aria-controls]').forEach((btn) => {
+      btn.setAttribute("aria-expanded", "false");
+    });
+
+    // Open clicked submenu if it was previously closed
+    if (isOpening) {
+      target.classList.remove("hidden");
+      button.setAttribute("aria-expanded", "true");
+
+      const icon = button.querySelector("svg");
+      if (icon) {
+        icon.classList.add("rotate-180");
+      }
+  }
+}
+
 async function loadSiteParts() {
   const header = document.getElementById("site-header");
   const footer = document.getElementById("site-footer");

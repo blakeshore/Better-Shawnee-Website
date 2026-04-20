@@ -1,9 +1,12 @@
 <header class="navbar bg-base-100 px-8 shadow sticky top-0 w-full z-50">
+  <!-- Mobile menu -->
   <div class="navbar-start lg:hidden">
     <div class="dropdown">
       <label tabindex="0" class="btn btn-ghost">☰</label>
       <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[60] p-3 shadow bg-base-100 rounded-box w-72">
+        <!-- Homepage -->
         <li><a href="homepage.html">Home</a></li>
+        <!-- Government -->
         <li>
           <details>
             <summary>Government</summary>
@@ -14,6 +17,7 @@
             </ul>
           </details>
         </li>
+         <!-- Services -->
         <li>
           <details>
             <summary>Services</summary>
@@ -24,6 +28,7 @@
             </ul>
           </details>
         </li>
+         <!-- Community -->
         <li>
           <details>
             <summary>Community</summary>
@@ -34,6 +39,7 @@
             </ul>
           </details>
         </li>
+        <!-- How Do I? -->
         <li>
           <details>
             <summary>How Do I?</summary>
@@ -48,12 +54,14 @@
     </div>
   </div>
 
+  <!-- Logo -->
   <div class="navbar-start hidden lg:flex">
     <a href="homepage.html">
       <img src="../graphics/ShawneeLogo.png" class="h-14" alt="Logo">
     </a>
   </div>
 
+  <!-- Navigation -->
   <div class="navbar-center hidden lg:flex gap-8 text-lg">
     <div class="dropdown dropdown-hover">
       <label tabindex="0" class="cursor-pointer">Government</label>
@@ -91,14 +99,18 @@
       </ul>
     </div>
   </div>
-
+  
+  <!-- Right side controls -->
   <div class="navbar-end gap-2">
+    <!-- Dark / Light Mode Button -->
     <button onclick="toggleTheme()" class="btn btn-ghost btn-circle ml-12">
+       <!-- moon icon -->
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 0111.21 3 7 7 0 1018 20a9 9 0 003-7.21z"/>
       </svg>
     </button>
 
+    <!-- Translate Button -->
     <div class="dropdown dropdown-end">
       <button class="btn btn-ghost gap-2 text-base flex-nowrap ">
         <img src="../graphics/GoogleTranslateLogo.png" class="h-7 shrink-0 min-w-[2rem]">
@@ -112,11 +124,25 @@
       </ul>
     </div>
 
+    <!-- Search -->
     <form action="search.html" method="GET" class="relative">
-      <input type="text" name="q" id="searchInput" placeholder="Search" class="input input-bordered rounded-full pl-4 pr-10 w-36 lg:w-36 xl:w-56">
-      <button type="submit" class="absolute right-3 top-1/2 -translate-y-1/2" aria-label="Search">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z"/>
+      <input
+        type="text"
+        name="q"
+        id="searchInput"
+        placeholder="Search"
+        class="input input-bordered rounded-full pl-4 pr-10 w-36 lg:w-36 xl:w-56"
+      >
+      <button
+        type="submit"
+        class="absolute right-3 top-1/2 -translate-y-1/2"
+        aria-label="Search"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5 opacity-60"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z"/>
         </svg>
       </button>
     </form>
