@@ -1,19 +1,35 @@
 //Data
 const newsData = [
     {
-        title: "Shawnee Airport Receives $13.5M for Runway and Taxiway Improvements",
-        date: "March 16, 2026",
-        month: "March",
+        title: "Clean up event at the historical Santa Fe depot",
+        date: "April 12, 2026",
+        month: "April",
         year: "2026",
-        summary: "The Shawnee Regional Airport (SNL) has secured...",
-        link: "news1.html"
+        summary: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+        link: "news04122026.html"
     },
     {
-        title: "New Parks and Recreation Director",
-        date: "November 18, 2025",
+        title: "Shawnee Park receives $4.5M for renovation",
+        date: "October 16, 2026",
+        month: "October",
+        year: "2026",
+        summary: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+        link: "news10162026.html"
+    },
+    {
+        title: "New Mayor Speech at the Shawnee City Hall ",
+        date: "November 20, 2025",
         month: "November",
         year: "2025",
-        summary: "The City of Shawnee is pleased to announce the promotion...",
-        link: "news2.html"
+        summary: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+        link: "news11182025.html"
+    },
+    {
+        title: "Demolition to Begin on Aldridge Hotel",
+        date: "October 1, 2025",
+        month: "October",
+        year: "2025",
+        summary: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
+        link: "news10012025.html"
     }
 ];

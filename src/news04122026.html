@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>News - City of Shawnee</title>
+
+        <!-- Tailwind + daisyUI -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css"
+            rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- theme -->
+        <script>
+    (function () {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      } else {
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+      }
+    })();
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.setAttribute("data-theme", html.getAttribute("data-theme") === "dark" ? "light" : "dark");
+    }
+  </script>
+        <!-- translate -->
+        <link rel="stylesheet" href="css/googletranslate.css">
+        <script src="scripts/googletranslate.js"></script>
+        <script
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        <!-- shared header/footer -->
+        <script src="scripts/siteparts.js"></script>
+        <!-- news system -->
+        <script src="data/newsData.js"></script>
+        <script src="scripts/renderinfo.js"></script>
+    </head>
+
+    <body
+        class="bg-[url('../graphics/HomepageSunsetBackground.jpg')] bg-cover bg-center bg-fixed min-h-screen flex flex-col">
+        <div id="google_translate_element" class="hidden"></div>
+
+        <!-- shared header -->
+        <div id="site-header"></div>
+
+        <main class="flex-1 mt-8">
+            <div class="w-full max-w-7xl mx-auto px-4">
+                <div
+                    class="flex min-h-[70vh] bg-base-200 rounded-2xl shadow-lg">
+
+                    <section
+                        class="flex-1 m-4 bg-base-100 rounded-xl shadow-md px-8 py-6">
+
+                        <div class="breadcrumbs text-sm mb-4">
+                            <ul>
+                                <li><a href="homepage.html">Home</a></li>
+                                <li><a href="news.html">News</a></li>
+                                <li>News Detail</li>
+                            </ul>
+                        </div>
+
+                        <h1 id="newsTitle" class="text-3xl font-bold mb-2"></h1>
+                        <p id="newsDate"
+                            class="text-sm text-base-content/70 mb-6"></p>
+
+                        <img
+                            src="/graphics/Home_Page.jpg"
+                            class="mx-auto w-full max-w-3xl rounded-lg mb-6">
+
+                        <div class="space-y-4 text-base leading-relaxed">
+
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipiscing elit. Elit quisque faucibus ex sapien
+                                vitae pellentesque sem. Sem placerat in id
+                                cursus mi pretium tellus. Tellus duis convallis
+                                tempus leo eu aenean sed. Sed diam urna tempor
+                                pulvinar vivamus fringilla lacus. Lacus nec
+                                metus bibendum egestas iaculis massa nisl. Nisl
+                                malesuada lacinia integer nunc posuere ut
+                                hendrerit. </p>
+
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipiscing elit. Consectetur adipiscing elit
+                                quisque faucibus ex sapien vitae. Ex sapien
+                                vitae pellentesque sem placerat in id. Placerat
+                                in id cursus mi pretium tellus duis. Pretium
+                                tellus duis convallis tempus leo eu aenean. </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipiscing elit. Ex sapien vitae pellentesque
+                                sem placerat in id. Pretium tellus duis
+                                convallis tempus leo eu aenean. Urna tempor
+                                pulvinar vivamus fringilla lacus nec metus.
+                                Iaculis massa nisl malesuada lacinia integer
+                                nunc posuere. Semper vel class aptent taciti
+                                sociosqu ad litora. Conubia nostra inceptos
+                                himenaeos orci varius natoque penatibus. Dis
+                                parturient montes nascetur ridiculus mus donec
+                                rhoncus. Nulla molestie mattis scelerisque
+                                maximus eget fermentum odio. Purus est efficitur
+                                laoreet mauris pharetra vestibulum fusce.</p>
+
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipiscing elit. Ex sapien vitae pellentesque
+                                sem placerat in id. Pretium tellus duis
+                                convallis tempus leo eu aenean. Urna tempor
+                                pulvinar vivamus fringilla lacus nec metus.
+                                Iaculis massa nisl malesuada lacinia integer
+                                nunc posuere. Semper vel class aptent taciti
+                                sociosqu ad litora. Conubia nostra inceptos
+                                himenaeos orci varius natoque penatibus. Dis
+                                parturient montes nascetur ridiculus mus donec
+                                rhoncus. Nulla molestie mattis scelerisque
+                                maximus eget fermentum odio. Purus est efficitur
+                                laoreet mauris pharetra vestibulum fusce.
+                            </p>
+
+                            <p>
+                                Pick up at
+                                <b> Recreation Center,
+                                    1234 N.
+                                    ABC,</b> The center is about on Monday to
+                                Friday form 9:00AM to 5:00PM
+                            </p>
+                            <p> For more information, visit the City's <a
+                                    href="events.html"
+                                    class="link link-primary">
+                                    Special events
+                                </a> page.</p>
+
+                        </div>
+
+                        <div class="mt-8">
+                            <a href="news.html" class="btn btn-outline">← Back
+                                to News</a>
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- shared footer -->
+        <div id="site-footer"></div>
+
+        <script>
+    loadNews();
+  </script>
+    </body>
+</html>

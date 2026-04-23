@@ -24,14 +24,10 @@ function renderInfo(data = newsData) {
     </div>
   `).join("");
 }
-//  return  current file name
-function getCurrentPage() {
-  const path = window.location.pathname;
-  return path.substring(path.lastIndexOf("/") + 1);
-}
 // load info from newData
 function loadNews() {
-  const currentPage = getCurrentPage();
+  const path = window.location.pathname;
+  const currentPage = path.substring(path.lastIndexOf("/") + 1);
   // serach and find news#.html
   const article = newsData.find(n => n.link === currentPage);
   document.getElementById("newsTitle").innerText = article.title;
