@@ -10,11 +10,11 @@ const newsData = [
     },
     {
         title: "Shawnee Park receives $4.5M for renovation",
-        date: "October 16, 2026",
-        month: "October",
+        date: "March 16, 2026",
+        month: "March",
         year: "2026",
         summary: "Lorem ipsum dolor sit amet consectetur adipiscing elit",
-        link: "news10162026.html"
+        link: "news03162026.html"
     },
     {
         title: "New Mayor Speech at the Shawnee City Hall ",
