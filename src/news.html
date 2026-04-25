@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News - City of Shawnee</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - City of Shawnee</title>
 
-  <!-- Tailwind + daisyUI -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind + daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- theme -->
-  <script>
+    <!-- theme -->
+    <script>
     (function () {
       const savedTheme = localStorage.getItem("theme");
       if (savedTheme) {
@@ -27,81 +28,111 @@
     }
   </script>
 
-  <!-- translate -->
-  <link rel="stylesheet" href="css/googletranslate.css">
-  <script src="scripts/googletranslate.js"></script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- translate -->
+    <link rel="stylesheet" href="css/googletranslate.css">
+    <script src="scripts/googletranslate.js"></script>
+    <script
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-  <!-- shared header/footer -->
-  <script src="scripts/siteparts.js"></script>
+    <!-- shared header/footer -->
+    <script src="scripts/siteparts.js"></script>
 
-  <!-- news system -->
-  <script src="data/newsData.js"></script>
-  <script src="scripts/renderinfo.js"></script>
-</head>
+    <!-- news system -->
+    <script src="data/newsData.js"></script>
+    <script src="scripts/renderinfo.js"></script>
+  </head>
 
-<body class="bg-[url('../graphics/HomepageSunsetBackground.jpg')] bg-cover bg-center bg-fixed min-h-screen flex flex-col">
-  <div id="google_translate_element" class="hidden"></div>
+  <body
+    class="bg-[url('../graphics/HomepageSunsetBackground.jpg')] bg-cover bg-center bg-fixed min-h-screen flex flex-col">
+    <div id="google_translate_element" class="hidden"></div>
 
-  <!-- shared header -->
-  <div id="site-header"></div>
+    <!-- shared header -->
+    <div id="site-header"></div>
 
-  <main class="flex-1 mt-8">
-    <div class="w-full max-w-7xl mx-auto px-4">
-      <div class="flex min-h-[70vh] bg-base-200 rounded-2xl shadow-lg">
+    <main class="flex-1 mt-8">
+      <div class="w-full max-w-7xl mx-auto px-4">
+        <div class="flex min-h-[70vh] bg-base-200 rounded-2xl shadow-lg">
+          <!-- Sidebar -->
+          <aside
+            class="w-64 m-4 mr-0 self-stretch bg-base-100 rounded-xl shadow-md p-3">
+            <nav>
+              <ul class="space-y-2">
+                <li><a href="billpay.html"
+                    class="block px-4 py-2 rounded-lg hover:bg-base-300">Bill
+                    Pay</a></li>
+                <li><a href="utilities.html"
+                    class="block px-4 py-2 rounded-lg hover:bg-base-300">Utilities</a></li>
+                <li><a href="permits.html"
+                    class="block px-4 py-2 rounded-lg hover:bg-base-300">Permits</a></li>
+                <li><a href="trash_pickup.html"
+                    class="block px-4 py-2 rounded-lg hover:bg-base-300">Trash
+                    Pickup</a></li>
+                <li><a href="events.html"
+                    class="block px-4 py-2 rounded-lg hover:bg-base-300">Events</a></li>
+                <li><a href="parks.html"
+                    class="block px-4 py-2 rounded-lg hover:bg-base-300">Parks</a></li>
+                <li><a href="news.html"
+                    class="block px-4 py-2 rounded-lg hover:bg-base-300">News</a></li>
+                <li><a href="report_issue.html"
+                    class="block px-4 py-2 rounded-lg hover:bg-base-300">Report
+                    Issue</a></li>
+              </ul>
+            </nav>
+          </aside>
 
-        <section class="flex-1 m-4 bg-base-100 rounded-xl shadow-md px-8 py-6">
+          <section
+            class="flex-1 m-4 bg-base-100 rounded-xl shadow-md px-8 py-6">
 
-          <div class="breadcrumbs text-sm mb-4">
-            <ul>
-              <li><a href="homepage.html">Home</a></li>
-              <li>News</li>
-            </ul>
-          </div>
+            <div class="breadcrumbs text-sm mb-4">
+              <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li>News</li>
+              </ul>
+            </div>
 
-          <h1 class="text-3xl font-bold mb-6">City News</h1>
+            <h1 class="text-3xl font-bold mb-6">City News</h1>
 
-          <div class="flex gap-4 mb-6 items-center">
-            <select id="monthbar" class="select select-bordered">
-              <option value>Month</option>
-              <option value="January">January</option>
-              <option value="February">February</option>
-              <option value="March">March</option>
-              <option value="April">April</option>
-              <option value="May">May</option>
-              <option value="June">June</option>
-              <option value="July">July</option>
-              <option value="August">August</option>
-              <option value="September">September</option>
-              <option value="October">October</option>
-              <option value="November">November</option>
-              <option value="December">December</option>
-            </select>
+            <div class="flex gap-4 mb-6 items-center">
+              <select id="monthbar" class="select select-bordered">
+                <option value>Month</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+              </select>
 
-            <select id="yearbar" class="select select-bordered">
-              <option value>Year</option>
-              <option value="2026">2026</option>
-              <option value="2025">2025</option>
-            </select>
+              <select id="yearbar" class="select select-bordered">
+                <option value>Year</option>
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+              </select>
 
-            <button onclick="filterDates()" class="btn btn-primary">
-              Filter
-            </button>
-          </div>
+              <button onclick="filterDates()" class="btn btn-primary">
+                Filter
+              </button>
+            </div>
 
-          <!-- dynamic news -->
-          <div id="newspage" class="space-y-6"></div>
+            <!-- dynamic news -->
+            <div id="newspage" class="space-y-6"></div>
 
-        </section>
+          </section>
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <!-- shared footer -->
-  <div id="site-footer"></div>
+    <!-- shared footer -->
+    <div id="site-footer"></div>
 
-  <script>
+    <script>
     renderInfo();
   </script>
-</body>
+  </body>
 </html>
