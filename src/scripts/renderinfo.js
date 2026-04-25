@@ -43,7 +43,7 @@ function showRecentNew() {
   const recent = newsData.slice(0, 4); //  pick 4s news
   container.innerHTML = recent.map(item => `
         <div class="flex items-start gap-4 p-4 rounded transition duration-200 hover:bg-base-100 group min-h-[90px]">
-              <svg class="w-10 h-10 text-pink-600 transition-transform duration-200 group-hover:translate-x-1"
+              <svg class="flex-shrink-0 w-10 h-10 text-pink-600 transition-transform duration-200 group-hover:translate-x-1"
         fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
           <path d="M4 4h16v16H4z"/>
           <path d="M8 8h8M8 12h8M8 16h4"/>
