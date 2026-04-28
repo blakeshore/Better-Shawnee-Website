@@ -1,4 +1,5 @@
-//old way to do the google translate feedbacks
+//Google translate button and hide its old widget
+//old way to do the google translate feedbacks by first initalize
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({
         pageLanguage: 'en',
@@ -9,7 +10,7 @@ function googleTranslateElementInit() {
 // if change to en
 function googleTranslate(lang) {
     if (lang === 'en') {
-        //KEEP THIS. it clear cookies for the website
+        //clear cookies for the website
         document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         return location.reload();
     }
@@ -19,7 +20,7 @@ function googleTranslate(lang) {
         temgoogle.dispatchEvent(new Event("change"));
     }
 }
-// uhhhh hide google
+//Force hide google old widget
 function hidegooglefeedback() {
     document.body.style.top = "0px"; // telling it to stay hidden
     // telling google popup to disappear

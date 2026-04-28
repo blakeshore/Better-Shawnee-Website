@@ -1,4 +1,4 @@
-// Date
+// Date news and filter functions 
 function filterDates() {
   const month = document.getElementById("monthbar").value;
   const year = document.getElementById("yearbar").value;

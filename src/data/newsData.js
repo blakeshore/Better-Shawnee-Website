@@ -1,4 +1,4 @@
-//Data
+// Mock data for new pages and filter
 const newsData = [
     {
         title: "Clean up event at the historical Santa Fe depot",
